@@ -2,13 +2,13 @@ const { Command } = require('discord-akairo');
 
 class PingCommand extends Command {
     constructor() {
-        super('ping', {
-            aliases: ['ping']
+        super('bonjour', {
+            aliases: ['bonjour']
         });
     }
 
     exec(message) {
-        return message.reply('Pong !')
+        return message.reply('Bonjour jeune aventurier')
     }
 }
 
