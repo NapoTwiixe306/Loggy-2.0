@@ -8,7 +8,7 @@ class PingCommand extends Command {
     }
 
     exec(message) {
-        return message.reply('Bonjour jeune aventurier')
+        return message.reply('wsh mec')
     }
 }
 
