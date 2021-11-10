@@ -18,7 +18,7 @@ class UserInfoCommand extends Command {
     }
 
     exec(message){
-        return message.reply('tu veux quoi toi ? tes fou')
+        return message.reply('PTDR T KI')
     }
 }
 
