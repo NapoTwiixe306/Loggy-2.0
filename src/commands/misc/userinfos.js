@@ -18,7 +18,7 @@ class UserInfoCommand extends Command {
     }
 
     exec(message){
-        return message.reply('salut !')
+        return message.reply('salut ! je suis Loggy')
     }
 }
 
