@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Deploy Bot on SSH
+        uses: appleboy/ssh-action@v2
+        with:
+          host: ${{secrets.SSH_HOST}}
+          username: ${{secrets.SSH_USER}}
+          password: ${{secrets.SSH_PASSWORD}}
+          script:
+            cd Loggy2.0/
+            git reset --hard
+            git clean -fd
+            git pull
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S npm install
+            pm2 restart Loggy
